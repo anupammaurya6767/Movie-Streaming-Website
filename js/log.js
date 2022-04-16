@@ -1,10 +1,13 @@
 
   document.getElementById("btn-log").addEventListener('click',() => {
-    // To remove all sessions 
-    var auth2 = gapi.auth2.getAuthInstance();
-auth2.signOut().then(function () {
+    // To remove all sessions
+    gapi.auth2.getAuthInstance().signIn({
+    prompt: 'select_account'
 });
-auth2.disconnect();
+//     var auth2 = gapi.auth2.getAuthInstance();
+// auth2.signOut().then(function () {
+// });
+// auth2.disconnect();
 //     gapi.auth.signOut()
 //     localStorage.clear();
 //     console.log("hi");
