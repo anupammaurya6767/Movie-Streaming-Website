@@ -1,6 +1,7 @@
 
   document.getElementById("btn-log").addEventListener('click',() => {
     // To remove all sessions 
+    localStorage.clear();
     console.log("hi");
     google.accounts.id.disableAutoSelect();
     googleSignInClient.signOut();
