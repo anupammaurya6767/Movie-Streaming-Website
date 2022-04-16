@@ -1,8 +1,7 @@
-document.getElementById("btn-log").addEventListener('click',() => {
+
+  document.getElementById("btn-log").addEventListener('click',() => {
     // To remove all sessions 
-    document.getElementById("btn-log").addEventListener('click',() => {
-    // To remove all sessions 
-    WebSecurity.Logout();
+    googleSignInClient.signOut();
                 gapi.load('auth2', function() {
             gapi.auth2.init();
             var auth2 = gapi.auth2.getAuthInstance();
@@ -26,5 +25,4 @@ document.getElementById("btn-log").addEventListener('click',() => {
    
     
     window.localStorage.clear();
-})
 })
