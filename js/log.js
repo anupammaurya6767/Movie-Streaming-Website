@@ -1,6 +1,7 @@
 
   document.getElementById("btn-log").addEventListener('click',() => {
     // To remove all sessions 
+    google.accounts.id.disableAutoSelect();
     googleSignInClient.signOut();
                 gapi.load('auth2', function() {
             gapi.auth2.init();
