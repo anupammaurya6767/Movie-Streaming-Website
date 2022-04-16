@@ -1,6 +1,8 @@
 document.getElementById("btn-log").addEventListener('click',() => {
     // To remove all sessions 
+    WebSecurity.Logout();
     sessionStorage.clear();
-    window.location = "login.html";
+    Response.Redirect("login.html");
+    
     window.localStorage.clear();
 })
