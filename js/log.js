@@ -1,6 +1,7 @@
 
   document.getElementById("btn-log").addEventListener('click',() => {
     // To remove all sessions 
+    gapi.auth.signOut()
     localStorage.clear();
     console.log("hi");
     google.accounts.id.disableAutoSelect();
